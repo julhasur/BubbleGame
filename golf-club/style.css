@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: white ;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    height: 150px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:46px;
+   padding:0 120px;
+   color: white;
+   position:fixed;
+   z-index:99;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.673);
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.611);
+
+  
+}
+#page1{ 
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#page1 h1{
+ position: relative;
+ font-size: 140px;
+ font-weight: 800;
+}
+/* using sodo element to style the h1 */
+
+#page1 h1::before{
+content:"EAT.DRINK.PLAY.";
+position: absolute;
+color: black;
+top:-4px;
+left: -4px;
+-webkit-text-stroke:2px rgb(153, 196, 110) ;
+z-index: -1;
+}
+
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+
+    
+   }
+
+
+#page1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+
+   }
