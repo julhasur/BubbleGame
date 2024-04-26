@@ -15,20 +15,19 @@
 
     <button onclick="
       playGame('scissors');
-    ">Scissors</button>
+    ">Scissors</button> 
     <button onclick="
     score.wins=0;
     score.losses=0;
     score.ties=0;
     ">Reset Score</button>
     <script>
-      //creating objects
-      const score={
-        wins:0,
-        losses:0,
-        ties:0
-      }
-
+      //retriving 
+      const score=
+      JSON.parse(localStorage.getItem('score'));
+      
+      //getting result out of from local storage:
+      // console.log(JSON.parse(localStorage.getItem('score')));
 
     function playGame(playerMove ){
 
@@ -69,6 +68,8 @@
             }else if(result==='tie'){
               score.ties+=1;
             }
+          //setting up local storage
+        localStorage.setItem('score',JSON.stringify(score));
 
             alert(`you picked ${playerMove}.Computer picked ${computer}.${result}
 wins:${score.wins},Losses:${score.losses},Ties:${score.ties}
