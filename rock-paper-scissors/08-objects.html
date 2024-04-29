@@ -12,20 +12,31 @@
     <button onclick="
       playGame('paper');
     ">Paper</button>
-
     <button onclick="
       playGame('scissors');
-    ">Scissors</button> 
+      ">Scissors</button> 
     <button onclick="
     score.wins=0;
     score.losses=0;
     score.ties=0;
+    
+    localStorage.removeItem('score');
     ">Reset Score</button>
     <script>
       //retriving 
-      const score=
-      JSON.parse(localStorage.getItem('score'));
+
+      let score=JSON.parse(localStorage.getItem('score')) || {
+          wins:0,
+          losses:0, 
+          ties:0   };
       
+      // if(score===null){
+      //   score={
+      //     wins:0,
+      //     losses:0, 
+      //     ties:0   }
+      // }
+
       //getting result out of from local storage:
       // console.log(JSON.parse(localStorage.getItem('score')));
 
